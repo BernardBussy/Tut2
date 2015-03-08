@@ -32,10 +32,13 @@ int main()
 	result.Print();
 }
 
-Fraction InputFraction()
+Fraction InputFraction() //Funtion to enter Fractions
 {
 	int temp;
 	Fraction tempF;
+	cout << "Enter the whole number Part of this Fraction" << endl;
+	cin >> temp;
+	tempF.SetWholeNumber(temp);
 	cout << "Enter Numerator of Fraction:" << endl;
 	cin >> temp;
 	tempF.SetNumerator(temp);

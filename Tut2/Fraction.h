@@ -7,6 +7,7 @@ private:
 public:
 	Fraction();
 	~Fraction();
+	void SetWholeNumber(int);
 	void SetDenominator(int);
 	void SetNumerator(int);
 	void Print();
