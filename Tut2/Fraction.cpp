@@ -30,7 +30,25 @@ void Fraction::SetWholeNumber(int whole)
 
 void Fraction::Print()
 {
-	cout << wholeNumber << numerator << "/" << denominator << endl;
+	simplify();
+	if (wholeNumber != 0)
+	{
+		cout << wholeNumber << "  " << numerator << "/" << denominator << endl;
+	}
+	else cout << numerator << "/" << denominator << endl;
+	
+}
+
+void Fraction::simplify() //simplify fractions whose fractional part is not a fraction
+{
+	int test = numerator % denominator;
+	if (test == 0)
+	{
+		wholeNumber = wholeNumber + (numerator / denominator);
+		numerator = 0;
+		denominator = 0;
+	}
+
 }
 
 Fraction Fraction::operator+(Fraction &in) //addition with operator overloading

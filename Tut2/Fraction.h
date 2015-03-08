@@ -3,7 +3,7 @@ class Fraction
 {
 private:
 	int numerator, denominator, wholeNumber;
-	void simplify(Fraction &);
+	void simplify();
 public:
 	Fraction();
 	~Fraction();
