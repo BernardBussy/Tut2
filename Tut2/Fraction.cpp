@@ -33,9 +33,21 @@ void Fraction::Print()
 	simplify();
 	if (wholeNumber != 0)
 	{
-		cout << wholeNumber << "  " << numerator << "/" << denominator << endl;
+		if (numerator != 0)
+		{
+			cout << wholeNumber << "  " << numerator << "/" << denominator << endl;
+		}
+		else cout << wholeNumber << endl;
 	}
-	else cout << numerator << "/" << denominator << endl;
+	else
+	{
+		if (numerator != 0)
+		{
+			cout << numerator << "/" << denominator << endl;
+		}
+		else cout << "0" << endl;
+	}
+		
 	
 }
 
@@ -46,7 +58,6 @@ void Fraction::simplify() //simplify fractions whose fractional part is not a fr
 	{
 		wholeNumber = wholeNumber + (numerator / denominator);
 		numerator = 0;
-		denominator = 0;
 	}
 
 }
