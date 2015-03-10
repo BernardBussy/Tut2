@@ -42,13 +42,13 @@ Fraction InputFraction() //Funtion to enter Fractions
 	cout << "Enter Numerator of Fraction:" << endl;
 	cin >> temp;
 	tempF.SetNumerator(temp);
-	EnterDenominator:
+	E:
 	cout << "Enter Denominator of Fraction:" << endl;
 	cin >> temp;
 	if (temp == 0)
 	{
 		cout << "You cannot have a denominator as Zero!" << endl;
-		goto EnterDenominator;
+		goto E;
 	}
 	tempF.SetDenominator(temp);
 
